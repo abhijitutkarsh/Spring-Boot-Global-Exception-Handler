@@ -16,7 +16,7 @@ public class HelloController {
     }
 
     @PostMapping
-    public ResponseEntity<String> createUser(@RequestBody UserDto userDto)
+    public ResponseEntity<String> createUser(@Valid @RequestBody UserDto userDto)
     {
         return ResponseEntity.ok("User Created " + userDto.getName());
     }
